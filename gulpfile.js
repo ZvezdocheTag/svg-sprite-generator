@@ -10,6 +10,7 @@ var through2 = require('through2');
 var cheerioTrue = require('cheerio');
 var gutil = require('gulp-util');
 var fs = require('fs');
+var metadataFile = require('./test/metadata.json');
 
 
 gulp.task('svg', function () {
@@ -48,11 +49,6 @@ gulp.task('svg', function () {
         };
     }).get();
 
-    var dataToAppend ='<!DOCTYPE html>'
-           + '<html><header>'  + '</header><body>'  + '<h1>Htlll</h2>' + data +  '</body></html>';
-
-    fs.appendFile('data.html', dataToAppend);
-
     var jsonFile = new gutil.File({
         path: 'metadata.json',
         contents: new Buffer(JSON.stringify(data))
@@ -69,6 +65,15 @@ gulp.task('clean', function(){ //создаем таск для очишения
 });
 
 gulp.task('html', function(){ //создаем таск для очишения папки build перед сборкой
-	return gulp
-      .src('data.html').pipe(gulp.dest('test'));
+  var arr = [];
+
+  for(var key in metadataFile) {
+    var dataToAppend ='<!DOCTYPE html>'
+           + '<html><header>'  + '</header><body>'  + '<h1>Htlll</h2>' + metadataFile[key].name  +  '</body></html>';
+
+
+    fs.appendFile('data.html', dataToAppend);
+
+  }
+
 });
