@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<h2>My sprites</h2>
+<ul>
+	<li>
+		<svg class="twitter-icon">
+  <use xlink:href="/test/sv.svg#svg-icon-black-back-closed-envelope-shape"></use>
+<svg>
+	</li>
+	<li>
+		<svg class="twitter-icon">
+  <use xlink:href="/test/sv.svg#svg-icon-green-accept"></use>
+<svg>
+	</li>
+	<li>
+		<svg class="twitter-icon">
+  <use xlink:href="/test/sv.svg#svg-icon-list"></use>
+<svg>
+	</li>
+	<li>
+		<svg class="twitter-icon">
+  <use xlink:href="/test/sv.svg#svg-icon-pen"></use>
+<svg>
+	</li>
+	<li>
+		<svg class="twitter-icon">
+  <use xlink:href="/test/sv.svg#"></use>
+<svg>
+	</li>
+	<li>
+		<svg class="twitter-icon">
+  <use xlink:href="test/sv.svg#"></use>
+<svg>
+	</li>
+	<li>
+		<svg class="twitter-icon">
+  <use xlink:href="test/sv.svg#"></use>
+<svg>
+	</li>
+</ul>
+
+<!-- <script src="svg4everybody.min.js"></script>
+<script>
+	svg4everybody();
+</script> -->
+  <!-- load combined svg file (with symbols) into body-->
+  <script>
+    (function (doc) {
+      var scripts = doc.getElementsByTagName('script')
+      var script = scripts[scripts.length - 1]
+      var xhr = new XMLHttpRequest()
+      xhr.onload = function () {
+        var div = doc.createElement('div')
+        div.innerHTML = this.responseText
+        div.style.display = 'none'
+        script.parentNode.insertBefore(div, script)
+      }
+      xhr.open('get', '/test/sv.svg', true)
+      xhr.send()
+    })(document)
+  </script>
+
+</body>
+</html>
