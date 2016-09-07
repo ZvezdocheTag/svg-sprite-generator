@@ -65,15 +65,15 @@ gulp.task('clean', function(){ //создаем таск для очишения
 });
 
 gulp.task('html', function(){ //создаем таск для очишения папки build перед сборкой
-  var arr = [];
 
-  for(var key in metadataFile) {
-    var dataToAppend ='<!DOCTYPE html>'
-           + '<html><header>'  + '</header><body>'  + '<h1>Htlll</h2>' + metadataFile[key].name  +  '</body></html>';
-
-
-    fs.appendFile('data.html', dataToAppend);
-
+  function decorator(f, after, before) {
+    return function(){
+      return before + f.apply(this.arguments) + after
+    }
   }
+    var dataToAppend ='<!DOCTYPE html>'
+           + '<html><header>'  + '</header><body>'  + '<h1>Htlll</h2>'  +  '</body></html>';
 
+    var $ = cheerioTrue.load(file.contents.toString(), {xmlMode: true});
+    fs.appendFile('data.html', dataToAppend);
 });
