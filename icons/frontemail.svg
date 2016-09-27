@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+        opacity: 0.2;
+      }
+    </style>
+  </defs>
+  <path id="frontemail.svg" class="cls-1" d="M868,2644.97h14a1,1,0,0,1,1,1v10a1,1,0,0,1-1,1H868a1,1,0,0,1-1-1v-10A1,1,0,0,1,868,2644.97Zm3,8.03h8v1h-8v-1Zm8-6h2v2h-2v-2Zm-8,4h8v1h-8v-1Z" transform="translate(-867 -2644.97)"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+        opacity: 0.2;
+      }
+    </style>
+  </defs>
+  <path id="iPhonepotrait.svg" class="cls-1" d="M710,2643h8a1,1,0,0,1,1,1v14a1,1,0,0,1-1,1h-8a1,1,0,0,1-1-1v-14A1,1,0,0,1,710,2643Zm0,2h8v11h-8v-11Zm4,12a0.625,0.625,0,1,1-1,.5A0.891,0.891,0,0,1,714,2657Z" transform="translate(-709 -2643)"/>
+</svg>

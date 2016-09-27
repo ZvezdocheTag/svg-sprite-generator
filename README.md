@@ -2,13 +2,12 @@
 
 ### Сборка
 
-Иконки svg складываем в папку `/images/svg/icons`
-После генерирования в папке `/images/svg`, будут 4 файла:
+Иконки svg складываем в папку `/icons`
+После генерирования в папке `/sprite`, будут 3 файла:
 
 1. sprite.svg 
 2. metadata.html - визуализация svg спрайта
 3. metadata.json - данные спрайта id иконок и viewBox
-4. data.css - стилизация metadata.html 
 
 Для первого запуска генератора спрайтов, требуется добавить npm пакеты 
 
@@ -49,19 +48,6 @@
 Доработать использование через css background
 
 
-
-
-
-## Build svg sprite
-
-    gulp svg
-
-## Build html example icons (process)
-
-    gulp html
-
-
-
 ### Using resources
 
  https://www.npmjs.com/package/gulp-util <br>
@@ -70,8 +56,3 @@
 
  * Генерировать html и контент
    http://stackoverflow.com/questions/21617468/node-js-generate-html
-
-### TODO
-
-1. Create config for path
-2. Done the job of build html

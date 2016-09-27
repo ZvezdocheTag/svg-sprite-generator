@@ -18,7 +18,7 @@ var beautify = require('gulp-beautify');
 
 gulp.task('svg', function () {
     return gulp
-        .src('sv/*.svg')
+        .src('icons/*.svg')
         .pipe(rename({prefix: 'svg-icon-'}))
         .pipe(svgmin(function (file) {
             var prefix = path.basename(file.relative, path.extname(file.relative));
@@ -85,20 +85,20 @@ gulp.task('svg', function () {
     cb();
 
 }))
-  .pipe(gulp.dest('test'));
+  .pipe(gulp.dest('sprite'));
 });
 gulp.task('templates', function() {
-  gulp.src(['test/metadata.html', 'test/metadata.json'])
+  gulp.src(['sprite/metadata.html', 'sprite/metadata.json'])
     .pipe(prettify({indent_char: ' ', indent_size: 4}))
-    .pipe(gulp.dest('test/'))
+    .pipe(gulp.dest('sprite'))
 });
 gulp.task('beautify', function() {
-  gulp.src('test/metadata.json')
+  gulp.src('sprite/metadata.json')
     .pipe(beautify({indent_size: 2}))
-    .pipe(gulp.dest('test/'))
+    .pipe(gulp.dest('sprite'))
 });
 gulp.task('clean', function(){ //создаем таск для очишения папки build перед сборкой
-    return del('test');
+    return del('sprite');
 });
 gulp.task('svgsprite', function(callback) {
   runSequence('clean','svg', 'beautify','templates', callback);
