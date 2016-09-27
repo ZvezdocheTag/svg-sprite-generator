@@ -1,5 +1,32 @@
-.twitter-icon {
-	fill: red;
-	width: 30px;
-	height: 30px;
+.svg-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+/*  stroke-width: 0;
+  stroke: currentColor;
+  fill: green;*/
+}
+
+
+.svg-lib__list {
+	display: flex;
+	list-style: none;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+.svg-lib__item {
+	padding: 20px;
+	text-align: center;
+	-webkit-flex-basis: 12.5%;
+	        flex-basis: 12.5%;
+}
+.svg-lib__item .img-wrap {
+	margin: 0px auto;
+	display: inline-block;
+	padding: 20px 0;
+}
+.svg-lib__item .title {
+	font: 18px/20px Arial, sans-serif;
+	color: #333;
 }
